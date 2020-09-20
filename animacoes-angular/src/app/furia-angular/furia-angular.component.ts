@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationController, Animation } from '@ionic/angular';
 
 @Component({
   selector: 'app-furia-angular',

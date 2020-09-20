@@ -1,4 +1,4 @@
-.moto {
+.furia {
   height: 20vw;
   position: absolute;
   z-index: 2;
@@ -7,125 +7,138 @@
   margin-left: auto;
   margin-right: auto;
   top: 7vw;
-}
 
-.moto .banco {
-  background: #3c3c3c;
-  height: 3vw;
-  width: 10.5vw;
-  position: absolute;
-  top: 9vw;
-  left: 6.7vw;
-  z-index: 4;
-  border-radius: 5px 5px 10px 20px;
-}
+  .banco {
+    background: #3c3c3c;
+    height: 2vw;
+    width: 8vw;
+    position: absolute;
+    top: 10vw;
+    left: 6.7vw;
+    z-index: 4;
+    border-radius: 10px 20px 10px 20px;
 
-.moto .garfo {
-  background: #ccc;
-  width: 1.2vw;
-  height: 11vw;
-  transform: rotate(-25deg);
-  left: 27.5vw;
-  top: 6vw;
-  position: absolute;
-  z-index: 4;
-}
+    &::after {
+      content: "";
+      display: block;
+      background: #3c3c3c;
+      height: 2vw;
+      width: 5vw;
+      position: absolute;
+      left: 7vw;
+      top: 2vw;
+      border-radius: 0px 10px 5px 10px;
+    }
+  }
 
-.moto .guidon {
-  background: #000;
-  width: 2.5vw;
-  height: 1vw;
-  margin-left: -1.2vw;
-  margin-top: -1vw;
-  border-radius: 10px 0 0 10px;
-}
+  .garfo {
+    background: #ccc;
+    width: 1.2vw;
+    height: 12.5vw;
+    transform: rotate(-25deg);
+    left: 27vw;
+    top: 5vw;
+    position: absolute;
+    z-index: 4;
+  }
 
-.moto .tanque {
-  width: 9.5vw;
-  height: 4.5vw;
-  background-color: yellow;
-  position: absolute;
-  bottom: 0%;
-  z-index: 3;
-  left: 17.5vw;
-  top: 7.2vw;
-  border-radius: 25px 10px 20px 5px;
-}
+  .guidon {
+    background: #000;
+    width: 3.5vw;
+    height: 1vw;
+    margin-left: -2.2vw;
+    margin-top: -1vw;
+    border-radius: 10px 0 0 10px;
+  }
 
-.moto .cano {
-  border-right: 2px solid #585858;
-  border-bottom: 7px solid #585858;
-  border-radius: 0 0 10px 0;
-  width: 16vw;
-  height: 3.3vw;
-  position: absolute;
-  top: 12vw;
-  left: 9vw;
-  z-index: 4;
-}
+  .tanque {
+    width: 8.5vw;
+    height: 4vw;
+    background-color: #5f0909;
+    position: absolute;
+    bottom: 0%;
+    z-index: 3;
+    left: 18.5vw;
+    top: 8.8vw;
+    border-radius: 34px 16px 20px 5px;
+    transform: rotate(-13deg);
+  }
 
-.moto .motor {
-  background: #ccc;
-  height: 3vw;
-  width: 8.5vw;
-  position: absolute;
-  top: 12vw;
-  left: 16vw;
-  border-radius: 10px 5px;
-  z-index: 5;
-  cursor: pointer;
-}
+  .cano {
+    border-right: 1vw solid #e6e6e6;
+    border-bottom: 2vw solid #e6e6e6;
+    border-radius: 0 0 10px 0;
+    width: 16vw;
+    height: 3.3vw;
+    position: absolute;
+    top: 14vw;
+    left: 9vw;
+    z-index: 4;
+  }
 
-.moto .pneu-traseiro {
-  background: #a8a8a8;
-  height: 4.5vw;
-  width: 4.5vw;
-  border-radius: 5vw;
-  position: absolute;
-  bottom: 0;
-  left: 7vw;
-  border: 2vw solid #000;
-}
+  .motor {
+    background: #ccc;
+    height: 3vw;
+    width: 8.5vw;
+    position: absolute;
+    top: 14vw;
+    left: 16vw;
+    border-radius: 10px 5px;
+    z-index: 5;
+    cursor: pointer;
+  }
 
-.moto .pneu-dianteiro {
-  background: #a8a8a8;
-  height: 4.5vw;
-  width: 4.5vw;
-  border-radius: 25vw;
-  position: absolute;
-  bottom: 0;
-  left: 26.5vw;
-  border: 1.5vw solid #000;
-}
+  .pneu-traseiro {
+    background: #a8a8a8;
+    height: 4.5vw;
+    width: 4.5vw;
+    border-radius: 5vw;
+    position: absolute;
+    bottom: 0;
+    left: 7vw;
+    border: 2vw solid #000;
+  }
 
-.moto .farol {
-  background: #fffb83;
-  height: 3vw;
-  width: 2vw;
-  position: absolute;
-  top: 6.9vw;
-  left: 27vw;
-  border-radius: 1vw;
-  cursor: pointer;
-}
+  .pneu-dianteiro {
+    background: #a8a8a8;
+    height: 4.5vw;
+    width: 4.5vw;
+    border-radius: 25vw;
+    position: absolute;
+    bottom: 0;
+    left: 26.5vw;
+    border: 1.5vw solid #000;
+  }
 
-.moto .farol.aceso::after {
-  content: "";
-  height: 1.5vw;
-  width: 0em;
-  display: block;
-  border-bottom: 10vw solid transparent;
-  border-top: 1vw solid transparent;
-  border-right: 35vw solid rgba(255, 251, 131, 0.55);
-  margin-top: -0.5vw;
-}
+  .farol {
+    background: #fffdc6;
+    height: 3vw;
+    width: 2vw;
+    position: absolute;
+    top: 6.9vw;
+    left: 27vw;
+    border-radius: 1vw;
+    cursor: pointer;
 
-.moto .farol .tampa {
-  background: grey;
-  width: 1vw;
-  position: absolute;
-  height: 3vw;
-  z-index: 3;
+    &.aceso::after {
+      content: "";
+      height: 1.5vw;
+      width: 0em;
+      display: block;
+      border-bottom: 10vw solid transparent;
+      border-top: 1vw solid transparent;
+      border-right: 35vw solid rgba(255, 251, 131, 0.55);
+      margin-top: -0.5vw;
+    }
+
+    .tampa {
+      background: grey;
+      width: 1vw;
+      position: absolute;
+      height: 3vw;
+      z-index: 3;
+    }
+  }
 }
 
 @keyframes balancando {
