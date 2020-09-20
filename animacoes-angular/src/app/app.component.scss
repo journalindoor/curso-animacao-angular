@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.palco {
+  border: 1px solid red;
+  background-color: #999;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+
+  .mostruario {
+    outline: 2px solid #000;
+    width: 80%;
+    height: 30vw;
+    margin: 0 auto;
+    position: relative;
+
+    h2 {
+      text-align: center;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 3vw;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  .palco {
+    width: 47%;
+    margin: 0 5px;
+    float: left;
+  }
+}

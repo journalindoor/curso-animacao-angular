@@ -1,4 +1,4 @@
-.bumblebee {
+.moto {
   height: 20vw;
   position: absolute;
   z-index: 2;
@@ -9,7 +9,7 @@
   top: 7vw;
 }
 
-.bumblebee .banco {
+.moto .banco {
   background: #3c3c3c;
   height: 3vw;
   width: 10.5vw;
@@ -20,7 +20,7 @@
   border-radius: 5px 5px 10px 20px;
 }
 
-.bumblebee .garfo {
+.moto .garfo {
   background: #ccc;
   width: 1.2vw;
   height: 11vw;
@@ -31,7 +31,7 @@
   z-index: 4;
 }
 
-.bumblebee .guidon {
+.moto .guidon {
   background: #000;
   width: 2.5vw;
   height: 1vw;
@@ -40,7 +40,7 @@
   border-radius: 10px 0 0 10px;
 }
 
-.bumblebee .tanque {
+.moto .tanque {
   width: 9.5vw;
   height: 4.5vw;
   background-color: yellow;
@@ -52,7 +52,7 @@
   border-radius: 25px 10px 20px 5px;
 }
 
-.bumblebee .cano {
+.moto .cano {
   border-right: 2px solid #585858;
   border-bottom: 7px solid #585858;
   border-radius: 0 0 10px 0;
@@ -64,7 +64,7 @@
   z-index: 4;
 }
 
-.bumblebee .motor {
+.moto .motor {
   background: #ccc;
   height: 3vw;
   width: 8.5vw;
@@ -76,7 +76,7 @@
   cursor: pointer;
 }
 
-.bumblebee .pneu-traseiro {
+.moto .pneu-traseiro {
   background: #a8a8a8;
   height: 4.5vw;
   width: 4.5vw;
@@ -87,7 +87,7 @@
   border: 2vw solid #000;
 }
 
-.bumblebee .pneu-dianteiro {
+.moto .pneu-dianteiro {
   background: #a8a8a8;
   height: 4.5vw;
   width: 4.5vw;
@@ -98,7 +98,7 @@
   border: 1.5vw solid #000;
 }
 
-.bumblebee .farol {
+.moto .farol {
   background: #fffb83;
   height: 3vw;
   width: 2vw;
@@ -109,7 +109,7 @@
   cursor: pointer;
 }
 
-.bumblebee .farol.aceso::after {
+.moto .farol.aceso::after {
   content: "";
   height: 1.5vw;
   width: 0em;
@@ -120,7 +120,7 @@
   margin-top: -0.5vw;
 }
 
-.bumblebee .farol .tampa {
+.moto .farol .tampa {
   background: grey;
   width: 1vw;
   position: absolute;

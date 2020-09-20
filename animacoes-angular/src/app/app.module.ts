@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BumblebeeVanillaComponent } from './bumblebee-vanilla/bumblebee-vanilla.component';
+import { FuriaAngularComponent } from './furia-angular/furia-angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BumblebeeVanillaComponent
+    BumblebeeVanillaComponent,
+    FuriaAngularComponent
   ],
   imports: [
     BrowserModule,
