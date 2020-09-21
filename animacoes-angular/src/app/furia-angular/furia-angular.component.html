@@ -8,7 +8,7 @@
   <div #motor class="motor" (click)="partida()"></div>
   <div class="pneu-traseiro"></div>
   <div class="pneu-dianteiro"></div>
-  <div #farol class="farol">
+  <div #farol class="farol" (click)="acendeFarol()" [ngClass]="aceso ? 'aceso' : ''">
     <div class="tampa"></div>
   </div>
 </div>

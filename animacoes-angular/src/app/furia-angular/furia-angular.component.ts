@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { AnimationController, Animation } from '@ionic/angular';
 
 @Component({
@@ -13,7 +7,6 @@ import { AnimationController, Animation } from '@ionic/angular';
   styleUrls: ['./furia-angular.component.scss'],
 })
 export class FuriaAngularComponent implements OnInit, AfterViewInit {
-
   constructor(private animationCtrl: AnimationController) {}
   @ViewChild('banco', { read: ElementRef, static: true })
   banco: ElementRef;
@@ -26,22 +19,35 @@ export class FuriaAngularComponent implements OnInit, AfterViewInit {
   @ViewChild('farol', { read: ElementRef, static: true })
   farol: ElementRef;
 
-  ngAfterViewInit(): void {}
+  aceso = false;
+  motorLigado = false;
+
+  balancando: Animation;
+
+  ngAfterViewInit(): void {
+    this.balancando = this.animationCtrl
+    .create()
+    .addElement(this.banco.nativeElement)
+    .addElement(this.tanque.nativeElement)
+    .addElement(this.cano.nativeElement)
+    .addElement(this.motor.nativeElement)
+    .addElement(this.farol.nativeElement)
+    .duration(200)
+    .iterations(Infinity)
+    .fromTo('transform', 'translateY(0)', 'translateY(-2px)');
+  }
 
   partida() {
-    const balancando: Animation = this.animationCtrl
-      .create()
-      .addElement(this.banco.nativeElement)
-      .addElement(this.tanque.nativeElement)
-      .addElement(this.cano.nativeElement)
-      .addElement(this.motor.nativeElement)
-      .addElement(this.farol.nativeElement)
-      .duration(200)
-      .iterations(Infinity)
-      .fromTo('transform', 'translateY(0)', 'translateY(-2px)');
+      this.motorLigado = !this.motorLigado;
+      if (this.motorLigado){
+        this.balancando.play();
+      } else {
+        this.balancando.stop();
+      }
+  }
 
-
-    balancando.play();
+  acendeFarol() {
+    this.aceso = !this.aceso;
   }
 
   ngOnInit(): void {}
